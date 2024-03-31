@@ -1,4 +1,4 @@
-import { useBlockProps, RichText } from "@wordpress/block-editor";
+import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
 
 export default function save({ attributes }) {
 	const {
@@ -19,10 +19,8 @@ export default function save({ attributes }) {
 	};
 
 	return (
-		<RichText.Content
-			{...useBlockProps.save({ style: columnStyles })}
-			tagName="p"
-			value={attributes.content}
-		/>
+		<div {...useBlockProps.save({ style: columnStyles })}>
+			<InnerBlocks.Content />
+		</div>
 	);
 }
