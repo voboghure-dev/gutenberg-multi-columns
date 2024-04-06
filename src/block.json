@@ -8,13 +8,16 @@
 	"icon": "columns",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
+	"keywords": ["newspaper", "columns", "flow", "text"],
+	"parent": ["core/post-content"],
 	"supports": {
 		"html": true,
 		"color": {},
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"align": ["wide", "full"]
 	},
 	"attributes": {
 		"columnCount": {
@@ -23,11 +26,11 @@
 		},
 		"columnWidth": {
 			"type": "integer",
-			"default": 200
+			"default": 100
 		},
 		"columnGap": {
 			"type": "integer",
-			"default": 40
+			"default": 10
 		},
 		"columnRuleStyle": {
 			"type": "string",
